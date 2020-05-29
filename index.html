@@ -68,6 +68,12 @@
         border: 1px solid white;
         color: white;
     }
+    legend.edge {
+        color: black;
+    }
+    legend.edge_dark {
+        color: white;
+    }
     button.button_style {
         border-radius: 30px;
         border: 0px;
@@ -252,8 +258,11 @@
     <a href="https://github.com/bizwofficial" target="_blank" class="follow_style" id="follow_button">Follow President Bridgman on GitHub</a><br>
     <p class="main_style" id="num" onclick="make()">0</p><br>
     <p class="history_style" id="history"> </p><br>
-    <span class="input_prompt" id="st_prompt">Start Number: </span><input type="number" name="起始学号" value=1 id="st"><br>
-    <span class="input_dark_prompt" id="ed_prompt">End Number: </span><input type="number" name="终止学号" value=48 id="ed"><br><br>
+    <fieldset style="width: 400px; margin: 0 auto; float: none;">
+        <legend class="edge" id="edge_prompt">Range of Student-ID</legend>
+        <span class="input_prompt" id="st_prompt">Start Number: </span><input type="number" name="起始学号" value=1 id="st"><br>
+        <span class="input_dark_prompt" id="ed_prompt">End Number: </span><input type="number" name="终止学号" value=48 id="ed"><br><br>
+    </fieldset>
     <button onclick="manual_start()" id="manual_but" class="button_second_style">Start Manually</button>
     <button onclick="make()" id="but" class="button_style">One-Key Choose</button><br>
     <blockquote class="quote_style" id="qt">
@@ -263,7 +272,7 @@
     <input type="checkbox" id="historycheck" title="If you want to choose multiple numbers, please check this box."><span class="centerize" id="history_prompt">Enable History-Memorizing</span>
     <input type="checkbox" id="repeatcheck" checked="checked"><span class="centerize" id="repeat_prompt">Remove Repeating Items Automatically</span><br><br>
     <hr>
-    <button class="ver_style" onclick="ver_hint()" title="What's this?">v1.6.1</button>
+    <button class="ver_style" onclick="ver_hint()" title="What's this?">v1.6.2</button>
     <img src='https://travis-ci.com/bizwofficial/cxh.svg?branch=master' />
     <img src='https://gitee.com/bizwofficial/cxh/badge/star.svg?theme=dark' alt='star'></img><br><br>
     <a href="https://github.com/bizwofficial/sic/archive/master.zip" download="download" class="download_style">Click here to get an off-line version.</a>
@@ -287,6 +296,7 @@
         document.getElementById("num").setAttribute("class", "main_dark_style");
         document.getElementById("qt").setAttribute("class", "quote_dark_style");
         document.getElementById("history").setAttribute("class", "history_dark_style");
+        document.getElementById("edge_prompt").setAttribute("class", "edge_dark");
         document.getElementById("st_prompt").setAttribute("class", "input_prompt_dark");
         document.getElementById("ed_prompt").setAttribute("class", "input_prompt_dark");
         document.getElementById("history_prompt").setAttribute("class", "centerize_dark");
@@ -305,6 +315,7 @@
         document.getElementById("st_prompt").setAttribute("class", "input_prompt");
         document.getElementById("ed_prompt").setAttribute("class", "input_prompt");
         document.getElementById("history_prompt").setAttribute("class", "centerize");
+        document.getElementById("edge_prompt").setAttribute("class", "edge_dark");
         document.getElementById("repeat_prompt").setAttribute("class", "centerize");
         //document.getElementById("change_style_button").innerHTML = "夜间模式";
         document.getElementById("change_style_button").setAttribute("onclick", "dark()");
