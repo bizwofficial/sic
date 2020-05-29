@@ -226,7 +226,7 @@
         border: 0px;
         padding: 4px 6px;
         text-align: center;
-        background-color: black;
+        background-color: green;
         color: white;
         font-size: 10px;
         font-family: "Open Sans";
@@ -263,7 +263,7 @@
     <input type="checkbox" id="historycheck" title="If you want to choose multiple numbers, please check this box."><span class="centerize" id="history_prompt">Enable History-Memorizing</span>
     <input type="checkbox" id="repeatcheck" checked="checked"><span class="centerize" id="repeat_prompt">Remove Repeating Items Automatically</span><br><br>
     <hr>
-    <button class="ver_style" onclick="ver_hint()" title="What's this?">v1.6.1rc</button>
+    <button class="ver_style" onclick="ver_hint()" title="What's this?">v1.6.1</button>
     <img src='https://travis-ci.com/bizwofficial/cxh.svg?branch=master' />
     <img src='https://gitee.com/bizwofficial/cxh/badge/star.svg?theme=dark' alt='star'></img><br><br>
     <a href="https://github.com/bizwofficial/sic/archive/master.zip" download="download" class="download_style">Click here to get an off-line version.</a>
@@ -315,7 +315,7 @@
         let ed=parseInt(document.getElementById("ed").value);
         ps=setInterval("make_random("+st+","+ed+")", 5);
         document.getElementById("manual_but").onclick=manual_stop;
-        document.getElementById("manual_but").innerHTML="手动停止";
+        document.getElementById("manual_but").innerHTML="Stop Manually";
         document.getElementById("but").setAttribute("class", "button_clicked_style");
         document.getElementById("but").disabled=true;
         document.getElementById("num").removeAttribute("onclick");
@@ -324,7 +324,7 @@
         clearInterval(ps);
         history_process();
         document.getElementById("manual_but").onclick=manual_start;
-        document.getElementById("manual_but").innerHTML="手动开始";
+        document.getElementById("manual_but").innerHTML="Start Manually";
         document.getElementById("but").setAttribute("class", "button_style");
         document.getElementById("but").disabled=false;
         document.getElementById("num").setAttribute("onclick", "make()");
